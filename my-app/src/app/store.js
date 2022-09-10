@@ -5,6 +5,6 @@ import DailyWeatherReducer from "../features/weatherApp/weatherDailySlice";
 export const store = configureStore({
   reducer: {
     currentWeather: CurrentWeatherReducer,
-    DailyWeather: DailyWeatherReducer,
+    dailyWeather: DailyWeatherReducer,
   },
 });

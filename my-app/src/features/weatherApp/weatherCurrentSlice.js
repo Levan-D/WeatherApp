@@ -36,11 +36,11 @@ const weatherDailySlice = createSlice({
         ).getHours()} : ${new Date(
           action.payload.sys.sunset * 1000
         ).getMinutes()}`,
-        temp: `${(action.payload.main.temp - 273.15).toFixed(0)}°c`,
+        temp: `${(action.payload.main.temp - 273.15).toFixed(0)}°`,
         descr: action.payload.weather[0].description,
-        humidity: `${action.payload.main.humidity} %`,
+        humidity: `${action.payload.main.humidity.toFixed(0)} %`,
         wind: `${(action.payload.wind.speed * 3.6).toFixed(1)} km/h`,
-        clouds: `${action.payload.clouds.all} %`,
+        clouds: `${action.payload.clouds.all.toFixed(0)} %`,
       };
     },
     [getCurrentWeather.rejected]: (state) => {

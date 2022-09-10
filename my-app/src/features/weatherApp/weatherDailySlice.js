@@ -9,7 +9,7 @@ export const getDailyWeather = createAsyncThunk("getDailyWeather", () => {
 });
 
 const initialState = {
-  data: {},
+  data: [],
   isLoading: true,
 };
 
@@ -22,10 +22,15 @@ const weatherDailySlice = createSlice({
       state.isLoading = true;
     },
     [getDailyWeather.fulfilled]: (state, action) => {
-        state.isLoading = false;
-        state.data=action.payload.list;
- 
-      console.log(state.data);
+      state.isLoading = false;
+      state.data = action.payload.list.map((list) => ({
+        id: list.dt,
+        time: list.dt,
+        timeString: list.dt_txt,
+        precip: `${(list.pop * 100).toFixed(0)}%`,
+        temp: `${(list.main.temp - 273.15).toFixed(0)}°`,
+        icon: `http://openweathermap.org/img/wn/${list.weather[0].icon}@2x.png`,
+      }));
     },
     [getDailyWeather.rejected]: (state) => {
       state.isloading = false;
