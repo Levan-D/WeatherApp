@@ -7,21 +7,29 @@ const WeatherHourly = () => {
 
   return (
     <div className="hourlyCardContainer">
-      {hourly.map((data) => (
-        <div key={data.id} className="hourlyCard">
-          <div className="time">{data.timeString.slice(11, 16)}</div>
-          <div>
-            <img src={data.icon} alt="weather icon" className="mainIcon" />
-          </div>
-          <div className="temp">{data.temp}</div>
-          <div className="precipCont">
-            <div className="dropIcon">
-              <img src={drop} alt="rain drop icon" className="dropIcon" />
+      {hourly.map((data) => {
+        if (
+          hourly[0].timeString.slice(8, 10) === data.timeString.slice(8, 10) ||
+          1 + Number(hourly[0].timeString.slice(8, 10)) ==
+            data.timeString.slice(8, 10)
+        ) {
+          return (
+            <div key={data.id} className="hourlyCard">
+              <div className="time">{data.timeString.slice(11, 16)}</div>
+              <div>
+                <img src={data.icon} alt="weather icon" className="mainIcon" />
+              </div>
+              <div className="temp">{data.temp}</div>
+              <div className="precipCont">
+                <div className="dropIcon">
+                  <img src={drop} alt="rain drop icon" className="dropIcon" />
+                </div>
+                <div className="precipText"> &nbsp;{data.precip}</div>
+              </div>
             </div>
-            <div className="precipText"> &nbsp;{data.precip}</div>
-          </div>
-        </div>
-      ))}
+          );
+        }
+      })}
     </div>
   );
 };
