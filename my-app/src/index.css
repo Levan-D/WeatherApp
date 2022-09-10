@@ -110,6 +110,7 @@ hr {
   display: flex;
   background-color: rgba(183, 196, 207, 0.2);
   padding: 15px 0;
+  margin: 0 0 15px 0;
   overflow-y: hidden;
 }
 .hourlyCard {

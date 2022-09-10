@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getCurrentWeather } from "./weatherCurrentSlice";
 import { getDailyWeather } from "./weatherDailySlice";
 import WeatherHourly from "./WeatherHourly";
+import WeatherDaily from "./WeatherDaily";
+
 const Weather = () => {
   const dispatch = useDispatch();
 
@@ -16,6 +18,7 @@ const Weather = () => {
     <div className="weatherApp">
       <WeatherCard />
       <WeatherHourly />
+      <WeatherDaily />
     </div>
   );
 };
