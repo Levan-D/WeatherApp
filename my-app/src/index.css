@@ -116,7 +116,11 @@ hr {
 .hourlyCard {
   width: 70px;
   height: 110px;
-  background-color: #84bfcd;
+  background: linear-gradient(
+    322deg,
+    rgba(60, 108, 152, 1),
+    #6fa5b2
+  );
   border-radius: 10px;
   text-align: center;
   font-size: 12px;

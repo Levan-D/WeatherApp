@@ -17,7 +17,7 @@ const WeatherCardInfo = () => {
   return (
     <div className="weatherCardInfo">
       <div className="location">
-        <div className="city">{currentData.city},</div>
+        <div className="city">{currentData.city},&nbsp;</div>
         <div className="country">{currentData.country}</div>
       </div>
       <div className="time">{currentData.date}</div>
@@ -35,7 +35,7 @@ const WeatherCardInfo = () => {
           <div className="sunText">{currentData.sunset}</div>
         </div>
       </div>
-      <div className="temp">{currentData.temp}</div>
+      <div className="temp">&nbsp;&nbsp;{currentData.temp}</div>
       <div className="descr">{currentData.descr}</div>
       <hr />
       <div className="info">
