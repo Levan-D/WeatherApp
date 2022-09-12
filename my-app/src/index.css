@@ -1,3 +1,5 @@
+/** @format */
+
 body {
   background-color: black;
   color: white;
@@ -22,22 +24,22 @@ body {
 }
 
 .weatherCard {
-  width: 380px;
+  width: 420px;
   height: 500px;
   border-radius: 20px;
   background-image: url("./images/weatherBackground.jpg");
   background-size: 420px auto;
   background-repeat: no-repeat;
-  margin: 60px 35px 20px 35px;
+  margin: 60px 15px 20px 15px;
   display: inline-block;
 }
 
 /* weather card info */
 
 .weatherCardInfo {
-  width: 300px;
+  width: 350px;
   height: 330px;
-  background-color: rgba(55, 102, 177, 0.7);
+  background-color: rgba(55, 102, 177, 0.6);
   border-radius: 15px;
   margin: 40px;
   display: inline-block;
@@ -45,7 +47,6 @@ body {
 }
 
 .location,
-.sunPosition,
 .info {
   display: flex;
   justify-content: space-evenly;
@@ -62,16 +63,10 @@ body {
   font-size: 16;
   font-weight: 700;
 }
-.sunText {
-  position: relative;
-  top: -6px;
-}
-.sunPosition img {
-  width: 40px;
-}
+
 .temp {
   font-weight: 900;
-  font-size: 66px;
+  font-size: 84px;
   position: relative;
   top: -15px;
 }
@@ -101,26 +96,50 @@ hr {
   width: 200px;
   position: relative;
   top: -10px;
+  margin: 20px auto;
 }
 
 /* weather card info */
 
 /* weather houry cards */
+.hourlyCardGradient {
+  background-color: rgba(47, 60, 86, 1);
+  width: 420px;
+  border-radius: 10px;
+  border: rgb(76, 85, 104) 1px solid;
+  margin: 0 15px 15px 15px;
+}
 .hourlyCardContainer {
   display: flex;
-  background-color: rgba(183, 196, 207, 0.2);
   padding: 15px 0;
-  margin: 0 0 15px 0;
+  margin: 0 10px;
   overflow-y: hidden;
+  width: 400px;
 }
+.hourlyCardContainer:before {
+  content: "";
+  width: 420px;
+  height: 114px;
+  padding: 15px 0;
+  transform: translate(-10px, -15px);
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 60, 86, 1) 2%,
+    rgba(47, 60, 86, 0.75) 3%,
+    rgba(47, 60, 86, 0) 4%,
+    rgba(47, 60, 86, 0) 96%,
+    rgba(47, 60, 86, 0.75) 97%,
+    rgba(47, 60, 86, 1) 98%
+  );
+  z-index: 111111;
+}
+
 .hourlyCard {
   width: 70px;
   height: 110px;
-  background: linear-gradient(
-    322deg,
-    rgba(60, 108, 152, 1),
-    #6fa5b2
-  );
+  background: linear-gradient(322deg, rgba(60, 108, 152, 1), #6fa5b2);
   border-radius: 10px;
   text-align: center;
   font-size: 12px;
@@ -167,6 +186,50 @@ hr {
   background: #b4d3db;
 }
 /* weather houry cards */
+
+/* sun rise sun set */
+.sunPositionWrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(47, 60, 86, 1);
+  width: 420px;
+  border-radius: 10px;
+  border: rgb(76, 85, 104) 1px solid;
+  margin: 15px;
+  padding: 14px 0;
+}
+.sunText,
+.sunTimes {
+  font-weight: 700;
+  font-size: 16px;
+}
+.sunText {
+  padding-top: 10px;
+  font-size: 17px;
+}
+.sunTimes {
+  font-weight: 900;
+}
+.sunrise,
+.sunset,
+.UVindex {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(322deg, rgba(60, 108, 152, 1), #6fa5b2);
+  border-radius: 10px;
+  text-align: center;
+}
+.sunrise img,
+.sunset img {
+  padding-top: 10px;
+  width: 50px;
+}
+.UVImage {
+  width: 40px;
+  padding-top: 5px;
+}
+
+/* sun rise sun set */
 
 /* weather daily list */
 
