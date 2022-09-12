@@ -11,26 +11,26 @@ const WeatherDaily = () => {
     return <div></div>
   }
 
-  console.log(Daily)
-  return (
-    <div className="hourlyCardContainer">
-      {Daily.map(data => (
-        <div key={data.id} className="hourlyCard">
-          <div className="time">{data.timeString.slice(11, 16)}</div>
-          <div>
-            <img src={data.icon} alt="weather icon" className="mainIcon" />
-          </div>
-          <div className="temp">{data.temp}</div>
-          <div className="precipCont">
-            <div className="dropIcon">
-              <img src={drop} alt="rain drop icon" className="dropIcon" />
-            </div>
-            <div className="precipText"> &nbsp;{data.precip}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
+  let sortedPrecip = {}
+  let count = {}
+  let filteredData = Daily.map(day => day.timeString.slice(8, 10))
+  Daily.map((obj, i) => {
+    if (obj.timeString.slice(8, 10) == filteredData[i]) {
+      count[filteredData[i]] = count[filteredData[i]]
+        ? [...count[filteredData[i]], obj]
+        : [obj]
+    }
+  })
+  let keys = Object.keys(count)
+
+  // for (let i = 0; i < keys.length; i++) {
+  //   sortedTemp[keys[i]] = count[keys[i]].sort((a, b) =>
+  //     parseInt(a.temp) > parseInt(b.temp) ? 1 : -1
+  //   )
+  // }
+  // console.log(sortedData)
+
+  return <div className="hourlyCardContainer">aaaa</div>
 }
 
 export default WeatherDaily

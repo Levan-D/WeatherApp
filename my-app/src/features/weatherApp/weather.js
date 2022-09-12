@@ -25,7 +25,7 @@ const Weather = () => {
     <div className="weatherApp">
       <WeatherCard />
       <WeatherHourly />
-      <WeatherDaily />
+      {/* <WeatherDaily /> */}
       <AirWindWater />
       <WeatherSun />
       <WeatherPollution />
