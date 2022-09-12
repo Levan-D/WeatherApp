@@ -11,7 +11,7 @@ const WeatherDaily = () => {
     return <div></div>
   }
 
-  let sortedPrecip = {}
+  let sortedTemp = {}
   let count = {}
   let filteredData = Daily.map(day => day.timeString.slice(8, 10))
   Daily.map((obj, i) => {
@@ -23,12 +23,12 @@ const WeatherDaily = () => {
   })
   let keys = Object.keys(count)
 
-  // for (let i = 0; i < keys.length; i++) {
-  //   sortedTemp[keys[i]] = count[keys[i]].sort((a, b) =>
-  //     parseInt(a.temp) > parseInt(b.temp) ? 1 : -1
-  //   )
-  // }
-  // console.log(sortedData)
+  for (let i = 0; i < keys.length; i++) {
+    sortedTemp[keys[i]] = count[keys[i]].sort((a, b) =>
+      parseInt(a.temp) > parseInt(b.temp) ? 1 : -1
+    )
+  }
+  console.log(count)
 
   return <div className="hourlyCardContainer">aaaa</div>
 }
