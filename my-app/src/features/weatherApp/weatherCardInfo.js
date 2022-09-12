@@ -23,21 +23,6 @@ const WeatherCardInfo = () => {
       <div className="time">{currentData.date}</div>
       <div className="temp">&nbsp;&nbsp;{currentData.temp}</div>
       <div className="descr">{currentData.descr}</div>
-      <hr />
-      <div className="info">
-        <div className="humidity">
-          <div className="topText">Humidity</div>
-          <div>{currentData.humidity}</div>
-        </div>
-        <div className="wind">
-          <div className="topText">Wind</div>
-          <div>{currentData.wind}</div>
-        </div>
-        <div className="clouds">
-          <div className="topText">Clouds</div>
-          <div>{currentData.clouds}</div>
-        </div>
-      </div>
     </div>
   )
 }

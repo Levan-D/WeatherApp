@@ -10,6 +10,7 @@ import WeatherHourly from "./WeatherHourly"
 import WeatherDaily from "./WeatherDaily"
 import WeatherSun from "./WeatherSun"
 import WeatherPollution from "./WeatherPollution"
+import AirWindWater from "./AirWindWater"
 
 const Weather = () => {
   const dispatch = useDispatch()
@@ -24,10 +25,10 @@ const Weather = () => {
     <div className="weatherApp">
       <WeatherCard />
       <WeatherHourly />
+      <WeatherDaily />
+      <AirWindWater />
       <WeatherSun />
       <WeatherPollution />
-
-      {/* <WeatherDaily /> */}
     </div>
   )
 }

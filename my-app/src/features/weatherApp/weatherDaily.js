@@ -1,13 +1,20 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import drop from "../../images/drop.png";
+/** @format */
+
+import React from "react"
+import { useSelector, useDispatch } from "react-redux"
+import drop from "../../images/drop.png"
 
 const WeatherDaily = () => {
-  const hourly = useSelector((store) => store.dailyWeather.data);
+  const Daily = useSelector(store => store.dailyWeather.data)
+  const isLoading = useSelector(store => store.currentWeather.isLoading)
+  if (isLoading === true) {
+    return <div></div>
+  }
 
+  console.log(Daily)
   return (
     <div className="hourlyCardContainer">
-      {hourly.map((data) => (
+      {Daily.map(data => (
         <div key={data.id} className="hourlyCard">
           <div className="time">{data.timeString.slice(11, 16)}</div>
           <div>
@@ -23,7 +30,7 @@ const WeatherDaily = () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default WeatherDaily;
+export default WeatherDaily

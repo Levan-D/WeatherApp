@@ -1,3 +1,5 @@
+/** @format */
+
 :root {
   /* 	Size is a variable for both - height and width dimensions of the circle  */
   --size: 200px;
@@ -12,7 +14,7 @@
   --spinnerFont: calc(var(--size) / 7);
 }
 .spinnerContainer {
-  margin: 65px 50px;
+  margin: 50px 70px;
 }
 
 .spinner {
@@ -89,15 +91,7 @@
   right: -50px;
   background: white;
   color: black;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    42% 75%,
-    22% 100%,
-    22% 75%,
-    0% 75%
-  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 42% 75%, 22% 100%, 22% 75%, 0% 75%);
   /* 	animation: displayMessage 2s linear 3s; */
   animation-name: displayMessage;
   animation-duration: 3s;
