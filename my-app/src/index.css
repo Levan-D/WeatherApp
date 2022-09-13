@@ -99,7 +99,7 @@ hr {
 
 /* weather card info */
 
-/* weather houry cards */
+/* weather houry/daily cards */
 .hourlyCardGradient {
   background-color: rgba(47, 60, 86, 1);
   width: 420px;
@@ -184,6 +184,42 @@ hr {
 .hourlyCardContainer::-webkit-scrollbar-thumb:hover {
   background: #b4d3db;
 }
+.DailyCardContainer {
+  font-size: 16px;
+  padding: 15px 15px;
+  margin: 30px 15px;
+  overflow-y: hidden;
+  width: 390px;
+  font-size: 16px;
+
+  background-color: rgba(47, 60, 86, 1);
+
+  border-radius: 10px;
+  border: rgb(76, 85, 104) 1px solid;
+}
+.dailyWeather {
+  display: flex;
+  padding: 2px 0;
+}
+.dailyWeather .dailytemp {
+  width: 25%;
+  text-align: end;
+}
+.dailyWeather .dailyPrecip {
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+}
+.dailyWeather .weekday {
+  width: 60%;
+}
+.dailyWeather img {
+  width: 9px;
+  height: 12px;
+  position: relative;
+  top: 4px;
+}
+
 /* weather houry cards */
 
 /* sun rise sun set */
