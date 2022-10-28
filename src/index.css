@@ -13,7 +13,7 @@ body {
 .weatherApp {
   margin: 2rem auto;
   width: 450px;
-  height: 1600px;
+  height: 1300px;
   border-radius: 20px;
   background: linear-gradient(
     322deg,
@@ -33,7 +33,19 @@ body {
   margin: 60px 15px 30px 15px;
   display: inline-block;
 }
-
+.locationIndicat {
+  line-height: 2px;
+  translate: 20px 20px;
+}
+.locationIndicat img {
+  height: 20px;
+  translate: 0 5px;
+}
+.errorMsg {
+  font-size: 15px;
+  color: #ff0000;
+  translate: 20px 30px;
+}
 /* weather card info */
 
 .weatherCardInfo {
